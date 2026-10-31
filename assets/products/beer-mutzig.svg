@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="MÜTZIG bottle">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7a4310"/><stop offset=".55" stop-color="#a5611d"/><stop offset="1" stop-color="#7a4310"/></linearGradient></defs>
+<rect width="120" height="120" rx="14" fill="#17171a"/>
+<ellipse cx="60" cy="113" rx="24" ry="3" fill="#000" opacity=".5"/>
+<rect x="54" y="8" width="12" height="7" rx="1.5" fill="#d6b97c"/>
+<path d="M55,14 L65,14 L65,38 C65,48 77,50 77,60 L77,106 Q77,112 71,112 L49,112 Q43,112 43,106 L43,60 C43,50 55,48 55,38 Z" fill="url(#g)"/>
+<rect x="55" y="28" width="10" height="9" fill="#14284b"/>
+<rect x="43" y="68" width="34" height="28" fill="#14284b"/>
+<rect x="43" y="68" width="34" height="2" fill="#d6b97c"/><rect x="43" y="94" width="34" height="2" fill="#d6b97c"/>
+<text x="60" y="85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="7" fill="#e9d8b0" textLength="27.599999999999998" lengthAdjust="spacingAndGlyphs">MÜTZIG</text>
+<rect x="47" y="58" width="3" height="46" rx="1.5" fill="#fff" opacity=".18"/>
+</svg>

@@ -1,0 +1,17 @@
+# Safety net: private financial material must never enter this public repo.
+private/
+receipts/
+*receipt*
+*Receipt*
+*.xlsx
+*.xls
+*.csv
+drafts.js
+*cost*
+*margin*
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*

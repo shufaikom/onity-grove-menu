@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Onity Grove — QR Table Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Prints 4 cards (A6, 105 x 148 mm) on one A4 sheet. Cut along the faint lines. */
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { margin: 0; background: #555; font-family: Inter, Arial, sans-serif; }
+    .sheet {
+      width: 210mm; height: 297mm; margin: 10mm auto; background: #fff;
+      display: grid; grid-template-columns: 105mm 105mm; grid-template-rows: 148.5mm 148.5mm;
+    }
+    .card {
+      position: relative; background: #0b0b0c; color: #f1ece2; outline: .2mm dashed #bbb;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 9mm 8mm;
+    }
+    .card::before {
+      content: ""; position: absolute; inset: 4mm; border: .35mm solid #d6b97c; border-radius: 2mm; pointer-events: none;
+    }
+    .logo { width: 38mm; height: auto; margin-bottom: 2mm; }
+    .name { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: 25pt;
+            letter-spacing: .14em; padding-left: .14em; color: #d6b97c; line-height: 1; }
+    .sub { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 14pt; color: #e9d8b0; margin-top: 1.5mm; }
+    .cta { margin: 6mm 0 3.5mm; font-size: 9.5pt; font-weight: 600; letter-spacing: .22em; padding-left: .22em; color: #f1ece2; }
+    .qr { background: #fff; padding: 2.5mm; border-radius: 2mm; }
+    .qr img { display: block; width: 46mm; height: 46mm; }
+    .loc { margin-top: 6mm; font-size: 8pt; letter-spacing: .18em; padding-left: .18em; text-transform: uppercase; color: #a39d92; }
+    @media print { body { background: none; } .sheet { margin: 0; } }
+  </style>
+</head>
+<body>
+  <div class="sheet" id="sheet"></div>
+  <template id="tpl">
+    <div class="card">
+      <img class="logo" src="../assets/logo.png" alt="" onerror="this.remove()">
+      <div class="name">ONITY GROVE</div>
+      <div class="sub">by Komikui</div>
+      <div class="cta">SCAN TO VIEW OUR MENU</div>
+      <div class="qr"><img src="../qr/onity-grove-menu-qr.svg" alt="QR code to the Onity Grove menu"></div>
+      <div class="loc">Yaoundé, Olembe (Camp SIC)</div>
+    </div>
+  </template>
+  <script>
+    var t = document.getElementById("tpl"), s = document.getElementById("sheet");
+    for (var i = 0; i < 4; i++) s.appendChild(t.content.cloneNode(true));
+  </script>
+</body>
+</html>

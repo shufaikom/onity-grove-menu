@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Onity Grove by Komikui — Menu</title>
+  <meta name="description" content="Drinks, table packages and food at Onity Grove by Komikui — Yaoundé, Olembe (Camp SIC).">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:title" content="Onity Grove by Komikui — Menu">
+  <meta property="og:description" content="Yaoundé, Olembe (Camp SIC)">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="draft-banner" class="draft-banner" hidden>PRIVATE PREVIEW — items marked DRAFT are not published</div>
+
+  <header class="hero">
+    <img class="logo" src="assets/logo.png" alt="Onity Grove by Komikui"
+         onerror="this.hidden=true; document.getElementById('wordmark').hidden=false;">
+    <div id="wordmark" class="wordmark" hidden>
+      <span class="wm-name">ONITY GROVE</span>
+      <span class="wm-sub">by Komikui</span>
+    </div>
+    <p class="location">Yaoundé · Olembe (Camp SIC)</p>
+  </header>
+
+  <nav class="cat-nav" aria-label="Menu categories">
+    <div id="cat-list" class="cat-list"></div>
+  </nav>
+
+  <main id="menu" class="menu"></main>
+
+  <footer class="footer">
+    <p>All prices in FCFA. Please drink responsibly.</p>
+    <p id="updated" class="muted"></p>
+  </footer>
+
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
